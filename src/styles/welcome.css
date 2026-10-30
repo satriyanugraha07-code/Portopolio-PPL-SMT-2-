@@ -1,0 +1,230 @@
+.scroll-welcome {
+  position: fixed;
+  z-index: 60;
+  inset: 0;
+  height: 100svh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: #050505;
+  box-shadow: 24px 0 60px rgba(0, 0, 0, 0.35);
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  will-change: transform;
+}
+
+.scroll-welcome::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-welcome__track {
+  position: relative;
+  height: 500svh;
+}
+
+.scroll-welcome__sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  background: #050505;
+  color: #fff;
+  transform-origin: center;
+}
+
+.scroll-welcome__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #050505;
+  object-fit: cover;
+  object-position: center;
+}
+
+.scroll-welcome__loader {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 0.75rem;
+  background: #050505;
+  color: var(--color-paper);
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.scroll-welcome__loader strong {
+  color: var(--color-lime);
+  font-family: var(--font-hero);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.scroll-welcome__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, transparent 20%, rgba(0, 0, 0, 0.26) 78%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.52));
+  pointer-events: none;
+}
+
+.scroll-welcome__copy {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  padding-inline: var(--gutter);
+  pointer-events: none;
+  text-align: center;
+}
+
+.scroll-welcome__word {
+  grid-area: 1 / 1;
+  display: block;
+  will-change: opacity, transform;
+  text-transform: uppercase;
+}
+
+.scroll-welcome__word--welcome {
+  font-family: var(--font-hero);
+  font-size: clamp(5.4rem, 15vw, 13.5rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 0.72;
+}
+
+.scroll-welcome__word--to {
+  color: var(--color-lime);
+  font-family: var(--font-hero);
+  font-size: clamp(6rem, 17vw, 15rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 0.72;
+}
+
+.scroll-welcome__word--journey {
+  font-family: var(--font-hero);
+  font-size: clamp(4.2rem, 11.5vw, 10rem);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 0.82;
+}
+
+.scroll-welcome__word--journey em {
+  color: var(--color-lime);
+  font-style: normal;
+}
+
+.scroll-welcome__guide,
+.scroll-welcome__end {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  bottom: clamp(2rem, 5vw, 4rem);
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  pointer-events: none;
+  text-transform: uppercase;
+}
+
+.scroll-welcome__guide {
+  flex-direction: column;
+}
+
+.scroll-welcome__mouse {
+  position: relative;
+  width: 1.35rem;
+  height: 2.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+}
+
+.scroll-welcome__mouse i {
+  position: absolute;
+  top: 0.42rem;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--color-lime);
+  transform: translateX(-50%);
+}
+
+.scroll-welcome__end {
+  color: var(--color-lime);
+}
+
+.scroll-welcome__progress {
+  position: absolute;
+  z-index: 3;
+  right: clamp(1.25rem, 4vw, 3.5rem);
+  bottom: 1.15rem;
+  left: clamp(1.25rem, 4vw, 3.5rem);
+  height: 2px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.scroll-welcome__progress span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--color-lime);
+  transform-origin: left;
+}
+
+.welcome-active {
+  background: #050505;
+  overflow: hidden;
+}
+
+.welcome-active .navbar {
+  opacity: 0 !important;
+  pointer-events: none;
+  transform: translateY(-100%) !important;
+}
+
+@media (max-width: 860px) {
+  .scroll-welcome__track {
+    height: 440svh;
+  }
+
+  .scroll-welcome__word--welcome {
+    font-size: clamp(4.4rem, 22vw, 7rem);
+  }
+
+  .scroll-welcome__word--to {
+    font-size: clamp(5.5rem, 28vw, 9rem);
+  }
+
+  .scroll-welcome__word--journey {
+    max-width: 94%;
+    font-size: clamp(3.5rem, 18vw, 6rem);
+    line-height: 0.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-welcome__track {
+    height: 400svh;
+  }
+
+  .scroll-welcome__sticky {
+    transform: none !important;
+  }
+}

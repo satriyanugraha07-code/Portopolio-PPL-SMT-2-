@@ -1,0 +1,885 @@
+/* ==========================================================================
+   ARTIFACT SECTION (05 — ANALISIS ARTEFAK PEMBELAJARAN)
+   ========================================================================== */
+.artifacts {
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 0%, rgba(184, 242, 10, 0.16), transparent 46%),
+    radial-gradient(circle at 4% 100%, rgba(246, 216, 224, 0.4), transparent 42%),
+    var(--color-paper);
+}
+
+.artifacts__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(260px, 24vw, 330px);
+  align-items: end;
+  gap: clamp(2rem, 3vw, 3.5rem);
+  margin-bottom: clamp(2rem, 3vw, 2.75rem);
+}
+
+.artifacts .section-heading {
+  max-width: 900px;
+  margin-bottom: 0;
+}
+
+.artifacts .section-heading__eyebrow {
+  margin-bottom: 1rem;
+  color: #526d00;
+}
+
+.artifacts .section-heading h2 {
+  font-size: clamp(2.8rem, 4.2vw, 4.6rem);
+  line-height: 0.96;
+}
+
+.artifacts .section-heading p {
+  max-width: 760px;
+  margin-top: 1.25rem;
+  font-size: clamp(0.94rem, 1.1vw, 1.04rem);
+  line-height: 1.7;
+}
+
+.artifacts__summary {
+  padding: clamp(1.3rem, 2vw, 1.7rem);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(184, 242, 10, 0.22), transparent 46%),
+    #102b31;
+  box-shadow: 0 18px 40px rgba(16, 43, 49, 0.18);
+  color: var(--color-white);
+}
+
+.artifacts__summary-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-lime);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.artifacts__summary strong {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1.9vw, 2rem);
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.artifacts__summary strong span {
+  color: var(--color-lime);
+  font-size: 1.45em;
+}
+
+.artifacts__summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem 0.9rem;
+  margin-top: 1.15rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.artifacts__summary-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.artifacts__summary-item span {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--color-white);
+}
+
+.artifacts__summary-item small {
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.artifacts__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: clamp(1.5rem, 2.4vw, 2.25rem);
+}
+
+.artifacts__filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--color-ink-soft);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.artifacts__filter-btn span {
+  display: inline-grid;
+  min-width: 1.35rem;
+  height: 1.35rem;
+  place-items: center;
+  padding-inline: 0.3rem;
+  border-radius: 999px;
+  background: rgba(21, 21, 21, 0.08);
+  font-size: 0.66rem;
+  font-weight: 800;
+}
+
+.artifacts__filter-btn:hover {
+  border-color: rgba(21, 21, 21, 0.4);
+  color: var(--color-ink);
+}
+
+.artifacts__filter-btn.is-active {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-white);
+}
+
+.artifacts__filter-btn.is-active span {
+  background: var(--color-lime);
+  color: var(--color-ink);
+}
+
+/* auto-fit membuat baris terakhir rata kiri tanpa sel kosong di kanan,
+   sehingga 18 kartu tetap seimbang pada semua ukuran layar. */
+.artifacts__grid {
+  display: grid;
+  gap: clamp(0.85rem, 1.4vw, 1.15rem);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.artifact-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: clamp(1.15rem, 1.8vw, 1.6rem);
+  border: 1px solid rgba(21, 21, 21, 0.1);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 12px 34px rgba(21, 21, 21, 0.05);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.artifact-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(21, 21, 21, 0.28);
+  box-shadow: 0 22px 48px rgba(21, 21, 21, 0.11);
+}
+
+.artifact-card__top {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.1rem;
+}
+
+.artifact-card__icon {
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-lime);
+  color: var(--color-ink);
+  transition: transform var(--transition-base);
+}
+
+.artifact-card:hover .artifact-card__icon {
+  transform: rotate(-8deg) scale(1.06);
+}
+
+.artifact-card__type {
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(21, 21, 21, 0.06);
+  color: var(--color-ink);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.artifact-card__number {
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  line-height: 1;
+  color: rgba(21, 21, 21, 0.28);
+}
+
+.artifact-card__category {
+  margin-bottom: 0.6rem;
+  color: #496100;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.artifact-card h3 {
+  /* min-height menjaga judul dua baris agar baris kartu tetap sejajar. */
+  min-height: 2.1em;
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 1.6vw, 1.7rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.artifact-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 1.35rem;
+  color: var(--color-ink-soft);
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.artifact-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(21, 21, 21, 0.08);
+}
+
+.artifact-card__detail {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-ink-soft);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.artifact-card__detail:hover {
+  color: var(--color-ink);
+}
+
+.artifact-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding-bottom: 0.15rem;
+  border-bottom: 2px solid var(--color-lime);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.artifact-card__link svg {
+  transition: transform var(--transition-fast);
+}
+
+.artifact-card:hover .artifact-card__link svg {
+  transform: translate(3px, -3px);
+}
+
+.artifacts__source {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 2rem auto 0;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(21, 21, 21, 0.35);
+  font-size: 0.8rem;
+  font-weight: 800;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.artifacts__source:hover {
+  border-color: #526d00;
+  color: #526d00;
+}
+
+/* Modal ringkasan artefak */
+.artifact-modal {
+  width: min(100%, 680px);
+}
+
+.artifact-modal__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.1rem;
+  color: var(--color-ink-soft);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.artifact-modal h2 {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  font-weight: 400;
+  line-height: 0.98;
+}
+
+.artifact-modal__meta-line {
+  margin: 0 0 1.2rem;
+  color: var(--color-ink-soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.artifact-modal__lead {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--color-ink);
+}
+
+.artifact-modal__details {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 1.75rem;
+}
+
+.artifact-modal__details > div {
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  background: #f0ede8;
+}
+
+.artifact-modal__details span {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #526d00;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.artifact-modal__details strong {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.artifact-modal__cta {
+  width: 100%;
+}
+
+/* ==========================================================================
+   PRACTICE VIDEO SECTION (07 — VIDEO PRAKTIK PEMBELAJARAN)
+   ========================================================================== */
+.practice {
+  position: relative;
+  overflow: hidden;
+  background: #f0ede8;
+}
+
+.practice__glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(184, 242, 10, 0.2), transparent 38%),
+    radial-gradient(circle at 90% 84%, rgba(202, 229, 242, 0.55), transparent 42%);
+}
+
+.practice .section-heading {
+  max-width: 860px;
+  margin-bottom: clamp(2.25rem, 4vw, 3.25rem);
+}
+
+.practice .section-heading__eyebrow {
+  margin-bottom: 0.85rem;
+  color: #526d00;
+}
+
+.practice .section-heading h2 {
+  font-size: clamp(2.8rem, 4.2vw, 4.6rem);
+  line-height: 0.96;
+}
+
+.practice__grid {
+  display: grid;
+  gap: clamp(1.25rem, 2vw, 1.9rem);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.practice__card {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  border: 1px solid rgba(21, 21, 21, 0.1);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  box-shadow: 0 14px 40px rgba(21, 21, 21, 0.07);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.practice__card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(21, 21, 21, 0.28);
+  box-shadow: var(--shadow-hover);
+}
+
+.practice__media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #0f1417;
+}
+
+.practice__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 700ms var(--ease-premium);
+}
+
+.practice__card:hover .practice__media img {
+  transform: scale(1.05);
+}
+
+.practice__media-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7, 29, 34, 0.05) 40%, rgba(7, 29, 34, 0.68) 100%);
+}
+
+.practice__badge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  padding: 0.32rem 0.65rem;
+  border-radius: 999px;
+  background: var(--color-lime);
+  color: var(--color-ink);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.practice__number {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.9rem;
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.practice__duration {
+  position: absolute;
+  right: 0.85rem;
+  bottom: 0.8rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 0.4rem;
+  background: rgba(15, 20, 23, 0.7);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.practice__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.25rem 0.75rem 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--color-ink);
+  font-size: 0.78rem;
+  font-weight: 800;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.practice__play::before {
+  content: '';
+  position: absolute;
+  inset: -0.55rem;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  opacity: 0.65;
+  animation: practice-pulse 2.8s var(--ease-premium) infinite;
+}
+
+.practice__play:hover {
+  background: var(--color-lime);
+  transform: translate(-50%, -50%) scale(1.04);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.3);
+}
+
+.practice__play svg {
+  flex-shrink: 0;
+}
+
+@keyframes practice-pulse {
+  0% {
+    transform: scale(0.94);
+    opacity: 0.7;
+  }
+
+  70% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+.practice__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: clamp(1.35rem, 2.2vw, 2rem);
+}
+
+.practice__topic {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 0.6rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(184, 242, 10, 0.28);
+  color: #3d5200;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.practice__body h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.2vw, 2.15rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.practice__meta {
+  margin: 0 0 0.85rem;
+  color: #526d00;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.practice__desc {
+  margin: 0 0 1.15rem;
+  color: var(--color-ink-soft);
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+.practice__highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+  margin-bottom: 1.35rem;
+}
+
+.practice__highlights span {
+  padding: 0.32rem 0.6rem;
+  border: 1px solid rgba(21, 21, 21, 0.14);
+  border-radius: 999px;
+  background: rgba(249, 248, 245, 0.9);
+  color: var(--color-ink-soft);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.practice__action {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: auto;
+  padding: 0 0 0.2rem;
+  border: none;
+  border-bottom: 2px solid var(--color-lime);
+  background: none;
+  font-size: 0.8rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.practice__action svg {
+  transition: transform var(--transition-fast);
+}
+
+.practice__action:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* Modal pemutar video */
+body.video-open {
+  overflow: hidden;
+}
+
+.practice__modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: grid;
+  padding: clamp(1rem, 3vw, 2rem);
+  place-items: center;
+  background: rgba(8, 20, 23, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.practice__modal {
+  width: min(100%, 1040px);
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  background: #0f2026;
+  color: var(--color-white);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.45);
+}
+
+.practice__modal-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.practice__modal-eyebrow {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: var(--color-lime);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.practice__modal-head h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.4vw, 2.1rem);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.practice__modal-close {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.practice__modal-close:hover {
+  background: var(--color-lime);
+  color: var(--color-ink);
+}
+
+.practice__player {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  background: #000;
+}
+
+.practice__player video,
+.practice__player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.practice__player-empty {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.practice__player-empty img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+  filter: saturate(0.6);
+}
+
+.practice__player-empty-copy {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.practice__player-empty-copy strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.practice__player-empty-copy p {
+  max-width: 460px;
+  margin: 0 0 0.5rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.practice__player-empty-copy code {
+  padding: 0.05rem 0.3rem;
+  border-radius: 0.3rem;
+  background: rgba(255, 255, 255, 0.12);
+  font-size: 0.76rem;
+}
+
+.practice__modal-note {
+  margin: 0.85rem 0 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Saat halaman dibuka langsung dari tautan ber-anchor (mis. #artefak atau
+   #video-praktik), layar pembuka scroll di dalam .scroll-welcome — bukan
+   jendela — sehingga bagian tujuan tidak terlihat. Kelas ini menyembunyikan
+   layar pembuka agar bagian yang ditautkan langsung tampil. */
+html.deep-link .scroll-welcome {
+  display: none;
+}
+
+/* ==========================================================================
+   RESPONSIF — ARTEFAK & VIDEO PRAKTIK
+   ========================================================================== */
+@media (max-width: 1080px) {
+  .artifacts__intro {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .artifacts__summary-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .practice__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .artifacts__summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .artifacts__filters {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+  }
+
+  .artifacts__filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .artifacts__filter-btn {
+    flex-shrink: 0;
+  }
+
+  .artifact-modal__details {
+    grid-template-columns: 1fr;
+  }
+
+  .practice__play span {
+    display: none;
+  }
+
+  .practice__play {
+    padding: 0.85rem;
+  }
+
+  .practice__modal {
+    padding: 0.85rem;
+  }
+}

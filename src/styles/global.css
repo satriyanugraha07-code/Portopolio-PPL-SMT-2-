@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --color-ink: #151515;
+  --color-ink-soft: #4f5055;
+  --color-white: #ffffff;
+  --color-paper: #f9f8f5;
+  --color-pink: #f6d8e0;
+  --color-sky: #cae5f2;
+  --color-blue: #92bcd4;
+  --color-lime: #b8f20a;
+  --color-line: rgba(21, 21, 21, 0.14);
+  --font-display: 'Bebas Neue', 'Arial Narrow', Impact, sans-serif;
+  --font-hero: 'Anton', Impact, 'Arial Narrow', sans-serif;
+  --font-body: 'Manrope', Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  --text-display: clamp(6.2rem, 11vw, 13.4rem);
+  --text-h2: clamp(2.5rem, 5.4vw, 5.25rem);
+  --text-h3: clamp(1.3rem, 2.2vw, 2rem);
+  --space-section: clamp(6rem, 11vw, 10rem);
+  --container: 1240px;
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  --radius-sm: 0.75rem;
+  --radius-md: 1.3rem;
+  --radius-lg: 2.25rem;
+  --shadow-soft: 0 18px 60px rgba(29, 26, 31, 0.1);
+  --shadow-hover: 0 24px 68px rgba(29, 26, 31, 0.16);
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --transition-fast: 220ms var(--ease-premium);
+  --transition-base: 420ms var(--ease-premium);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  width: 0;
+}
+
+.edge-scrollbar {
+  position: fixed;
+  z-index: 100;
+  top: 12svh;
+  right: 0.55rem;
+  width: 0.72rem;
+  height: 76svh;
+  padding: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.36);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 8px 30px rgba(21, 21, 21, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(1rem) scale(0.96);
+  transition:
+    opacity 220ms var(--ease-premium),
+    transform 320ms var(--ease-premium);
+  backdrop-filter: blur(12px) saturate(145%);
+  -webkit-backdrop-filter: blur(12px) saturate(145%);
+}
+
+.edge-scrollbar.is-visible.is-scrollable {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+.edge-scrollbar__thumb {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  left: 3px;
+  min-height: 48px;
+  border-radius: inherit;
+  background: rgba(21, 21, 21, 0.52);
+  box-shadow:
+    0 3px 12px rgba(21, 21, 21, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24);
+  will-change: height, transform;
+}
+
+.welcome-active .edge-scrollbar {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.welcome-active .edge-scrollbar__thumb {
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow:
+    0 3px 14px rgba(0, 0, 0, 0.26),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  color: inherit;
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-lime);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--color-lime);
+  color: var(--color-ink);
+}
+
+.container {
+  width: min(100% - (var(--gutter) * 2), var(--container));
+  margin-inline: auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.section {
+  position: relative;
+  padding-block: var(--space-section);
+  scroll-margin-top: 0;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 3.45rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.88rem 1.3rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button svg {
+  transition: transform var(--transition-fast);
+}
+
+.button:hover svg {
+  transform: translateX(3px);
+}
+
+.button--primary {
+  background: var(--color-ink);
+  box-shadow: 0 10px 28px rgba(21, 21, 21, 0.2);
+  color: var(--color-white);
+}
+
+.button--primary:hover {
+  box-shadow: 0 16px 36px rgba(21, 21, 21, 0.28);
+}
+
+.button--secondary {
+  border-color: rgba(21, 21, 21, 0.38);
+  background: rgba(255, 255, 255, 0.28);
+  color: var(--color-ink);
+  backdrop-filter: blur(8px);
+}
+
+.button--secondary:hover {
+  border-color: var(--color-ink);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.button--light {
+  background: var(--color-white);
+  color: var(--color-ink);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.16);
+}
+
+.section-heading {
+  max-width: 970px;
+  margin-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+.section-heading--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-heading__eyebrow {
+  display: inline-block;
+  margin-bottom: 1.35rem;
+  color: var(--color-ink-soft);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 0.96;
+  text-wrap: balance;
+}
+
+.section-heading p {
+  max-width: 680px;
+  margin: 1.65rem 0 0;
+  color: var(--color-ink-soft);
+  font-size: clamp(1rem, 1.4vw, 1.16rem);
+  line-height: 1.8;
+}
+
+.section-heading--center p {
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --space-section: 5.5rem;
+  }
+
+  html {
+    scroll-padding-top: 0;
+  }
+
+  .button {
+    min-height: 3.25rem;
+  }
+
+  .section-heading {
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
