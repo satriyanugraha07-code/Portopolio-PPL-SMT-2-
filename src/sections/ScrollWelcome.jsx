@@ -13,7 +13,7 @@ const clamp = (value, min = 0, max = 1) =>
 
 const FRAME_COUNT = 192
 const getFrameUrl = (index) =>
-  `/assets/welcome-frames-v2/frame-${String(index + 1).padStart(4, '0')}.webp`
+  `${import.meta.env.BASE_URL}assets/welcome-frames-v2/frame-${String(index + 1).padStart(4, '0')}.webp`
 
 export default function ScrollWelcome() {
   const scrollContainerRef = useRef(null)

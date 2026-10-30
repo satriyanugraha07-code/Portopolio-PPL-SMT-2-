@@ -93,7 +93,7 @@ export default function Navbar() {
         >
           <img
             className="brand__mark"
-            src="/assets/logo-ust.png"
+            src={`${import.meta.env.BASE_URL}assets/logo-ust.png`}
             alt="Logo Universitas Sarjanawiyata Tamansiswa"
           />
           <span className="brand__copy">

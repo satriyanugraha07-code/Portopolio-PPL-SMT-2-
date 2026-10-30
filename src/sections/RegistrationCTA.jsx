@@ -6,7 +6,7 @@ export default function RegistrationCTA() {
     <section className="section cta" id="pendaftaran" aria-labelledby="cta-title">
       <div className="cta__bg" aria-hidden="true">
         <img
-          src="/assets/backgrounds/bg-pastel-04.png"
+          src={`${import.meta.env.BASE_URL}assets/backgrounds/bg-pastel-04.png`}
           alt=""
           loading="lazy"
         />

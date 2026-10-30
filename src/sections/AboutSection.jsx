@@ -8,7 +8,7 @@ export default function AboutSection() {
       {/* Background Pastel Landscape Canvas */}
       <div className="about__bg" aria-hidden="true">
         <img
-          src="/assets/backgrounds/bg-pastel-01.png"
+          src={`${import.meta.env.BASE_URL}assets/backgrounds/bg-pastel-01.png`}
           alt=""
           loading="lazy"
         />
@@ -74,7 +74,7 @@ export default function AboutSection() {
           <MotionReveal className="about__visual-col" direction="left" delay={0.12}>
             <div className="about__photo-card">
               <img
-                src="/assets/about/satriya-nugraha-cropped.jpg"
+                src={`${import.meta.env.BASE_URL}assets/about/satriya-nugraha-cropped.jpg`}
                 alt="Satriya Nugraha mengenakan almamater di jalan dengan latar pepohonan bambu"
                 loading="lazy"
               />

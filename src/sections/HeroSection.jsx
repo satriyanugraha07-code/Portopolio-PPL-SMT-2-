@@ -73,7 +73,7 @@ export default function HeroSection() {
     >
       <div className="hero__background" aria-hidden="true">
         <img
-          src="/assets/hero/hero-background.svg"
+          src={`${import.meta.env.BASE_URL}assets/hero/hero-background.svg`}
           alt=""
           draggable="false"
           fetchPriority="high"
@@ -118,7 +118,7 @@ export default function HeroSection() {
       >
         <div className="hero__person-depth">
           <img
-            src="/assets/hero/hero-person.svg"
+            src={`${import.meta.env.BASE_URL}assets/hero/hero-person.svg`}
             alt="Calon guru Teknik Mesin dalam suasana visual langit pastel"
             draggable="false"
             fetchPriority="high"

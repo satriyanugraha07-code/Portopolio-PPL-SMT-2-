@@ -122,7 +122,7 @@ export const reflectionDocuments = [
     title: 'Filosofi Pendidikan & Pendidikan Nilai',
     description:
       'Perubahan fokus dari hasil tugas menuju pemahaman manusia, konteks, nilai, etika, dan tindakan yang mendidik.',
-    image: '/assets/reflections/filosofi-pendidikan.png',
+    image: `${import.meta.env.BASE_URL}assets/reflections/filosofi-pendidikan.png`,
     href:
       'https://drive.google.com/file/d/1YqAoSWknsiEvcs7f4_KlYZ-4FeZj-vbv/view?usp=drive_link',
   },
@@ -133,7 +133,7 @@ export const reflectionDocuments = [
     title: 'Pembelajaran Mendalam & Asesmen',
     description:
       'Pergeseran dari metode dan aktivitas menuju tujuan, bukti belajar, asesmen, serta tindak lanjut yang selaras.',
-    image: '/assets/reflections/pembelajaran-mendalam.png',
+    image: `${import.meta.env.BASE_URL}assets/reflections/pembelajaran-mendalam.png`,
     href:
       'https://drive.google.com/file/d/1mfvt65lGPLunXHGMJYk4AZD9xh3q4Gib/view?usp=drive_link',
   },
@@ -144,7 +144,7 @@ export const reflectionDocuments = [
     title: 'Pemahaman Peserta Didik & Pembelajarannya',
     description:
       'Memahami peserta didik secara holistik serta menyiapkan diferensiasi, scaffolding, dan dukungan yang sesuai.',
-    image: '/assets/reflections/pemahaman-peserta-didik.png',
+    image: `${import.meta.env.BASE_URL}assets/reflections/pemahaman-peserta-didik.png`,
     href:
       'https://drive.google.com/file/d/1Q9Dx-_faHGk_i_WGcOo7ZsLWys1ZZytU/view?usp=drive_link',
   },
@@ -155,7 +155,7 @@ export const reflectionDocuments = [
     title: 'Inovasi Pembelajaran Berbasis Ajaran Tamansiswa',
     description:
       'Penerapan tuntunan, keteladanan, dan kemandirian dalam pembelajaran Teknik Mesin.',
-    image: '/assets/reflections/inovasi-tamansiswa.jpg',
+    image: `${import.meta.env.BASE_URL}assets/reflections/inovasi-tamansiswa.jpg`,
     href:
       'https://drive.google.com/file/d/162aa32AqfCeR-kOhPPCfc_YiOuNgzmd_/view?usp=drive_link',
   },
@@ -166,7 +166,7 @@ export const reflectionDocuments = [
     title: 'PPL Terbimbing di SMK Negeri 2 Depok Sleman',
     description:
       'Perjalanan observasi, asistensi, praktik mengajar, umpan balik, dan refleksi perbaikan pembelajaran.',
-    image: '/assets/reflections/ppl-smkn2-depok.jpg',
+    image: `${import.meta.env.BASE_URL}assets/reflections/ppl-smkn2-depok.jpg`,
     href:
       'https://drive.google.com/file/d/1NRA11BcNHdURwaH74OkrcloRYfDKh5V4/view?usp=drive_link',
   },
@@ -177,7 +177,7 @@ export const reflectionDocuments = [
     title: 'Refleksi PPG',
     description:
       'Sintesis perjalanan belajar PPG: sebelum, selama, dan rencana pengembangan diri sebagai guru profesional.',
-    image: '/assets/reflections/refleksi-ppg.png',
+    image: `${import.meta.env.BASE_URL}assets/reflections/refleksi-ppg.png`,
     href:
       'https://drive.google.com/file/d/1Q2HbhezPuty_GiG5ps_0kTuk14wCaNv0/view?usp=drive_link',
   },
@@ -188,7 +188,7 @@ export const reflectionDocuments = [
     title: 'Pembelajaran Sosial Emosional',
     description:
       'Penerapan CASEL, keteladanan guru, experiential learning, dan school well-being di kelas Gambar Teknik.',
-    image: '/assets/reflections/pembelajaran-sosial-emosional.png',
+    image: `${import.meta.env.BASE_URL}assets/reflections/pembelajaran-sosial-emosional.png`,
     href:
       'https://drive.google.com/file/d/14TLNq28mheTNYeIu0VftPLg8yvjGwPDm/view?usp=drive_link',
   },
@@ -199,7 +199,7 @@ export const reflectionDocuments = [
     title: 'PMA Lanjut: Pembelajaran Mendalam & Asesmen',
     description:
       'Dari rancangan pembelajaran menuju keputusan yang berbasis bukti, asesmen, dan tindak lanjut di ruang kelas.',
-    image: '/assets/reflections/pma-lanjut.png',
+    image: `${import.meta.env.BASE_URL}assets/reflections/pma-lanjut.png`,
     href:
       'https://drive.google.com/file/d/1tN52-ftHOEWo4EWeaJHpx-FefK9iGF9J/view?usp=drive_link',
   },
@@ -210,7 +210,7 @@ export const reflectionDocuments = [
     title: 'Inovasi Kejuruan',
     description:
       'Dari kebutuhan nyata di bengkel menuju rancangan media pembelajaran kejuruan yang siap diuji.',
-    image: '/assets/reflections/inovasi-kejuruan.png',
+    image: `${import.meta.env.BASE_URL}assets/reflections/inovasi-kejuruan.png`,
     href:
       'https://drive.google.com/file/d/1k87fnFgCPbW6yItudxLL0Qipi3sXc14A/view?usp=drive_link',
   },
@@ -221,7 +221,7 @@ export const reflectionDocuments = [
     title: 'PPL Mandiri',
     description:
       'Pengelolaan kelas secara mandiri pada Gambar Teknik dan CNC menuju guru yang lebih percaya diri.',
-    image: '/assets/reflections/ppl-mandiri.png',
+    image: `${import.meta.env.BASE_URL}assets/reflections/ppl-mandiri.png`,
     href:
       'https://drive.google.com/file/d/1u1D6_slM7ZfDxBdkUiFCh9w_K9rVUmXl/view?usp=drive_link',
   },
@@ -232,7 +232,7 @@ export const reflectionDocuments = [
     title: 'Refleksi Projek Kepemimpinan',
     description:
       'Kolaborasi bersama Komunitas Elingo Jogja dalam projek Java Edu Culture serta analisis 4C atas dampaknya.',
-    image: '/assets/reflections/refleksi-projek-kepemimpinan.png',
+    image: `${import.meta.env.BASE_URL}assets/reflections/refleksi-projek-kepemimpinan.png`,
     href:
       'https://drive.google.com/file/d/1mQhlPnIn_cDYrYqzEyxlbUykr1CzwIyl/view?usp=drive_link',
   },
@@ -436,8 +436,8 @@ export const practiceVideos = [
       'Praktik pembelajaran pengenalan macam-macam garis gambar teknik: garis tebal kontinu, garis tipis, garis putus-putus, garis strip-titik, hingga garis bebas — lengkap dengan fungsi, ketebalan sesuai standar ISO, contoh penerapan, dan latihan menggambar bersama peserta didik.',
     highlights: ['Jenis & fungsi garis', 'Ketebalan standar ISO', 'Latihan menggambar'],
     duration: 'Siap ditayangkan',
-    poster: '/assets/video/praktik-01-poster.webp',
-    src: '/assets/video/praktik-pembelajaran-01.mp4',
+    poster: `${import.meta.env.BASE_URL}assets/video/praktik-01-poster.webp`,
+    src: `${import.meta.env.BASE_URL}assets/video/praktik-pembelajaran-01.mp4`,
     youtubeId: '',
   },
   {
@@ -451,8 +451,8 @@ export const practiceVideos = [
       'Praktik pembelajaran bukaan (bentangan) benda kerja: prinsip panjang sebenarnya, langkah menggambar bukaan secara manual, hingga penerapannya pada pekerjaan pelat dan pengembangan benda bersudut maupun bersilinder di bidang kejuruan Teknik Mesin.',
     highlights: ['Prinsip panjang sebenarnya', 'Langkah menggambar bukaan', 'Penerapan di bengkel'],
     duration: 'Siap ditayangkan',
-    poster: '/assets/video/praktik-02-poster.webp',
-    src: '/assets/video/praktik-pembelajaran-02.mp4',
+    poster: `${import.meta.env.BASE_URL}assets/video/praktik-02-poster.webp`,
+    src: `${import.meta.env.BASE_URL}assets/video/praktik-pembelajaran-02.mp4`,
     youtubeId: '',
   },
 ]
@@ -466,7 +466,7 @@ export const featuredPrograms = [
     description:
       'Media pembelajaran gambar teknik manual berbasis web yang memadukan pengenalan alat dan pensil, standardisasi garis ISO, etiket, proyeksi orthogonal, model 3D, lembar kerja interaktif, hingga tes diagnostik, UTS, UAS, dan sertifikat kelulusan.',
     badge: 'ARCUS',
-    image: '/assets/innovations/arcus-preview.png',
+    image: `${import.meta.env.BASE_URL}assets/innovations/arcus-preview.png`,
     href: 'https://satriyanugraha07-code.github.io/Lomba-Media-Pembelajaran/',
     linkLabel: 'Buka ARCUS',
   },
@@ -483,7 +483,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 01',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-01.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-01.webp`,
     featured: true,
     description:
       'Dokumentasi kegiatan pembelajaran gambar teknik saat proses belajar berlangsung.',
@@ -493,7 +493,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 02',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-02.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-02.webp`,
     featured: false,
     description:
       'Dokumentasi kegiatan pembelajaran gambar teknik saat proses belajar berlangsung.',
@@ -503,7 +503,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 03',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-03.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-03.webp`,
     featured: false,
     description:
       'Dokumentasi kegiatan pembelajaran gambar teknik saat proses belajar berlangsung.',
@@ -513,7 +513,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 04',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-04.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-04.webp`,
     featured: false,
     description:
       'Dokumentasi kegiatan pembelajaran gambar teknik saat proses belajar berlangsung.',
@@ -523,7 +523,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 05',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-05.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-05.webp`,
     featured: false,
     description:
       'Dokumentasi kegiatan pembelajaran gambar teknik saat proses belajar berlangsung.',
@@ -533,7 +533,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 06',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-06.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-06.webp`,
     featured: false,
     description:
       'Dokumentasi kegiatan pembelajaran gambar teknik saat proses belajar berlangsung.',
@@ -543,7 +543,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 07',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-07.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-07.webp`,
     featured: false,
     description:
       'Dokumentasi kegiatan pembelajaran gambar teknik saat proses belajar berlangsung.',
@@ -553,7 +553,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 08',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-08.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-08.webp`,
     featured: false,
     description:
       'Peserta didik mencatat materi dan berlatih menggambar di ruang kelas Gambar Teknik.',
@@ -563,7 +563,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 09',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-09.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-09.webp`,
     featured: false,
     description:
       'Guru menjelaskan alur pembelajaran dan tujuan yang akan dicapai pada awal pertemuan.',
@@ -573,7 +573,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 10',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-10.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-10.webp`,
     featured: false,
     description:
       'Guru menyampaikan materi gambar teknik di papan tulis dengan ilustrasi sketsa.',
@@ -583,7 +583,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 11',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-11.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-11.webp`,
     featured: false,
     description:
       'Pendampingan guru kepada kelompok peserta didik saat mengerjakan lembar kerja.',
@@ -593,7 +593,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 12',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-12.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-12.webp`,
     featured: true,
     description:
       'Guru mendampingi peserta didik secara individual saat latihan menggambar.',
@@ -603,7 +603,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 13',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-13.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-13.webp`,
     featured: false,
     description:
       'Peserta didik fokus menyelesaikan gambar kerja tepat waktu menggunakan jangka.',
@@ -613,7 +613,7 @@ export const galleryItems = [
     title: 'Dokumentasi Pembelajaran Gambar Teknik 14',
     category: 'Dokumentasi',
     date: 'PPG 2025/2026',
-    image: '/assets/dokumentasi/dokumentasi-14.webp',
+    image: `${import.meta.env.BASE_URL}assets/dokumentasi/dokumentasi-14.webp`,
     featured: false,
     description:
       'Penggunaan jangka untuk membuat lingkaran dan busur pada gambar teknik manual.',
@@ -629,7 +629,7 @@ export const articleItems = [
       'Bagaimana menghubungkan teori dasar teknik mesin dengan pembuatan produk riil yang menumbuhkan kreativitas dan kedisiplinan peserta didik.',
     date: '15 Januari 2025',
     readTime: '4 menit baca',
-    image: '/assets/backgrounds/bg-pastel-03.png',
+    image: `${import.meta.env.BASE_URL}assets/backgrounds/bg-pastel-03.png`,
     featured: true,
   },
   {
@@ -640,7 +640,7 @@ export const articleItems = [
       'Pentingnya integrasi kesadaran sosial-emosional dalam mengelola ruang praktik bengkel agar setiap murid merasa dihargai.',
     date: '28 Desember 2024',
     readTime: '3 menit baca',
-    image: '/assets/backgrounds/bg-pastel-02.png',
+    image: `${import.meta.env.BASE_URL}assets/backgrounds/bg-pastel-02.png`,
     featured: false,
   },
   {
@@ -651,7 +651,7 @@ export const articleItems = [
       'Langkah taktis pendidik dalam menjembatani teknologi mesin konvensional menuju otomatisasi Industri 4.0.',
     date: '10 November 2024',
     readTime: '5 menit baca',
-    image: '/assets/backgrounds/bg-pastel-01.png',
+    image: `${import.meta.env.BASE_URL}assets/backgrounds/bg-pastel-01.png`,
     featured: false,
   },
 ]
